@@ -12,9 +12,9 @@ const os		= require("os");
   }
 });*/
 if (os.hostname()=='raspi') {
-	const sequelize = new Sequelize("postgres://postgres:pi@localhost:5432/puhu");
+	var sequelize = new Sequelize("postgres://postgres:pi@localhost:5432/puhu");
 } else {
-	const sequelize = new Sequelize("postgres://postgres:pi@192.168.2.188:5432/serkangis");
+	var sequelize = new Sequelize("postgres://postgres:ntc123*@192.168.2.188:5432/serkangis");
 }
 // Connect all the models/tables in the database to a db object,
 //so everything is accessible via one object
